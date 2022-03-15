@@ -39,7 +39,7 @@ var db = firebase.firestore();
     let phone = document.getElementById('phone');
     let message = document.getElementById('message');
 
-const btn = document.getElementById('btn');
+let btn = document.getElementById('submitButton');
 
 btn.addEventListener('click', () => {
  //Add Data...............................
