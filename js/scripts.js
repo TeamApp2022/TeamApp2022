@@ -34,13 +34,20 @@ firebase.initializeApp({
 
 var db = firebase.firestore();
     
+    let name = document.getElementById('name');
+        let email = document.getElementById('email');
+    let phone = document.getElementById('phone');
+    let message = document.getElementById('message');
+
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', () => {
  //Add Data...............................
     db.collection("questions_team").add({
-    name: "Ada",
-    mail: "Lovelace",
-    phone: 1815,
-    message: "Lovelace",
-    
+    name: name.textContent,
+    mail: email.textContent,
+    phone: phone.textContent,
+    message: message.textContent   
 })
 .then((docRef) => {
     console.log("Document written with ID: ", docRef.id);
@@ -48,6 +55,7 @@ var db = firebase.firestore();
 .catch((error) => {
     console.error("Error adding document: ", error);
 });
-
+});
+    
     
 });
