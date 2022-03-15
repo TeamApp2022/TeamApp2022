@@ -25,15 +25,27 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     //firebase...................................
-    // Initialize Cloud Firestore through Firebase
-firebase.initializeApp({
-  apiKey: 'AIzaSyDmw8-nulY88ZZp9y8bhAEEoYeibzvA3m4',
-  authDomain: '### FIREBASE AUTH DOMAIN ###',
-  projectId: 'semsar-21596'
-});
+   // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-var db = firebase.firestore();
-    
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAywyl2G3a2SGvjWoBs69SVr67mtb993CI",
+  authDomain: "teamqa-cd730.firebaseapp.com",
+  projectId: "teamqa-cd730",
+  storageBucket: "teamqa-cd730.appspot.com",
+  messagingSenderId: "705235402300",
+  appId: "1:705235402300:web:d1fe91bbe57045e20d0d39",
+  measurementId: "G-1SFDJVP9LE"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
     let name = document.getElementById('name');
         let email = document.getElementById('email');
     let phone = document.getElementById('phone');
